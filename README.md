@@ -7,6 +7,6 @@ align="center">swayfx-Dotfile</h1>
 </p>
 
 <p align="center">
-  <img src="img/1.png" width="260" alt="2"/>
-  <img src="img/3.png" width="260" alt="3"/>
+  <img src="img/1.png" width="300" alt="2"/>
+  <img src="img/3.png" width="300" alt="3"/>
 </p>
