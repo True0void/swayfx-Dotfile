@@ -18,10 +18,10 @@ input * {
 exec udiskie --tray
 #for_window [class=".*"] opacity 0.85
 #exec awww-daemon
-#exec_always sleep 1 && awww img /home/chef/Téléchargements/pexels-nikiemmert-17359682.jpg --transition-type wave --transition-angle 30 --transition-duration 2
-#exec_always fish -c "killall -q awww-daemon; awww-daemon & sleep 1; awww img /home/chef/Téléchargements/pexels-nikiemmert-17359682.jpg --transition-type wave --transition-angle 30 --transition-duration 2"
+#exec_always sleep 1 && awww img $HOME/Téléchargements/pexels-nikiemmert-17359682.jpg --transition-type wave --transition-angle 30 --transition-duration 2
+#exec_always fish -c "killall -q awww-daemon; awww-daemon & sleep 1; awww img $HOME/Téléchargements/pexels-nikiemmert-17359682.jpg --transition-type wave --transition-angle 30 --transition-duration 2"
 #exec_always pkill awww-daemon; exec awww-daemon
-output * bg /home/chef/wallpapers/pexels-nikiemmert-17359682.jpg fill
+output * bg $HOME/wallpapers/pexels-nikiemmert-17359682.jpg fill
 output DP-1 mode 2560x1440@200.002Hz
 output DP-1 adaptive_sync on
 
