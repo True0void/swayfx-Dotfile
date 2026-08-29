@@ -1,0 +1,15 @@
+[Added Associations]
+text/plain=pluma.desktop;
+application/json=code-oss.desktop;librewolf.desktop;
+application/vnd.microsoft.portable-executable=wine.desktop;protontricks-launch.desktop;
+application/x-msdownload=protontricks-launch.desktop;
+text/x-python3=pluma.desktop;
+text/html=pluma.desktop;
+text/css=pluma.desktop;
+
+[Default Applications]
+x-scheme-handler/fcade=fcade-quark.desktop
+inode/directory=thunar.desktop
+x-scheme-handler/http=librewolf.desktop
+x-scheme-handler/https=librewolf.desktop
+x-scheme-handler/hydralauncher=hydralauncher.desktop

@@ -1,0 +1,101 @@
+{
+    "layer": "top",
+    "spacing": 0,
+    "height": 0,
+
+    "margin-top": 8,
+    "margin-right": 8,
+    "margin-bottom": 0,
+    "margin-left": 8,
+
+    "modules-left":
+    [
+        "sway/workspaces"
+    ],
+
+    "modules-center":
+    [
+        "custom/music",
+        "custom/cava"
+    ],
+
+    "modules-right":
+    [
+        "tray",
+        "battery",
+        "network",
+        "wireplumber",
+        "clock"
+    ],
+
+    "sway/workspaces":
+    {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false
+    },
+
+    "custom/music": {
+        "format": "{}",
+        "escape": true,
+        "return-type": "json",
+        "max-length": 40,
+        "interval": 1,
+        "exec": "playerctl -p kew,spotify metadata --format '{\"text\": \"{{status_icon}} {{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' 2> /dev/null",
+        "status-icons": {
+            "playing": "▶",
+            "paused": "⏸"
+        },
+        "on-click": "playerctl -p kew,spotify play-pause",
+        "on-scroll-up": "playerctl -p kew,spotify next",
+        "on-scroll-down": "playerctl -p kew,spotify previous"
+    },
+
+    "custom/cava": {
+        "format": "{}",
+        "exec": "stdbuf -o0 cava -p ~/.config/cava/config | sed -u 's/;//g;s/0/ /g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g'",
+	"persistent": true,
+        "restart-interval": 0
+    },
+
+    "tray":
+    {
+        "spacing": 10,
+        "tooltip": false
+    },
+
+    "battery":
+    {
+        "format": "bat {capacity}%",
+        "interval": 5,
+        "states":
+        {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+
+    "network":
+    {
+        "format-wifi" : "wifi up",
+        "format-ethernet": "ethernet up",
+        "format-disconnected" : "no network",
+        "tooltip": false
+    },
+
+    "wireplumber":
+    {
+        "scroll-step": 5,
+        "format": "vol {volume}%",
+        "format-muted": "muted",
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    
+    "clock": {
+       "timezone": "Europe/Paris",
+       "format": "{:%H:%M:%S}",
+       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    }
+}

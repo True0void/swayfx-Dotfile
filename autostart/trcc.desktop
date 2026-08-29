@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=TRCC (next)
+GenericName=Thermalright Cooler Control
+Comment=Auto-start TRCC GUI on login
+Exec=/usr/sbin/trcc gui --resume
+Icon=trcc-linux
+Terminal=false
+Categories=System;Settings;
+X-GNOME-Autostart-enabled=true
+StartupNotify=false
