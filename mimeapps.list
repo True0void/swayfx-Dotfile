@@ -6,7 +6,6 @@ application/x-msdownload=protontricks-launch.desktop;
 text/x-python3=pluma.desktop;
 text/html=pluma.desktop;
 text/css=pluma.desktop;
-
 [Default Applications]
 x-scheme-handler/fcade=fcade-quark.desktop
 inode/directory=thunar.desktop
